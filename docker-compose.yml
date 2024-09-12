@@ -7,7 +7,7 @@ services:
     container_name: Godfather_Discord_Bot
     restart: unless-stopped
     environment:
-      - discord_token=YOUR_DISCORD_TOKEN_BOT1
-      - discord_server_name=test
+      - discord_token=TOKEN_BOT
+      - discord_server_name=Famiglia Old School
     volumes:
       - ./Godfather_Discord_Bot:/app
