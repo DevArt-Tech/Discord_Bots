@@ -1,0 +1,13 @@
+version: '3'
+services:
+  il-padrino-della-famiglia:
+    build:
+      context: ./Godfather_Discord_Bot
+      dockerfile: Dockerfile
+    container_name: Godfather_Discord_Bot
+    restart: unless-stopped
+    environment:
+      - discord_token=YOUR_DISCORD_TOKEN_BOT1
+      - discord_server_name=test
+    volumes:
+      - ./Godfather_Discord_Bot:/app
