@@ -11,3 +11,13 @@ services:
       - discord_server_name=Famiglia Old School
     volumes:
       - ./Godfather_Discord_Bot:/app
+  devart-support:
+    build:
+      context: ./DevArt_Support_Discord_Bot
+      dockerfile: Dockerfile
+    container_name: DevArt_Support_Discord_Bot
+    restart: unless-stopped
+    environment:
+      - discord_token=TOKEN_BOT
+    volumes:
+      - ./DevArt_Support_Discord_Bot:/app
