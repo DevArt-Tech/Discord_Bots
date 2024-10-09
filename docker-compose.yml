@@ -1,5 +1,15 @@
 version: '3'
 services:
+  yakuza-gta:
+    build:
+      context: ./Yakuza_GTA_Discord_Bot
+      dockerfile: Dockerfile
+    container_name: Yakuza_GTA_Discord_Bot
+    restart: unless-stopped
+    environment:
+      - discord_token=TOKEN_BOT
+    volumes:
+      - ./Yakuza_GTA_Discord_Bot:/app
   il-padrino-della-famiglia:
     build:
       context: ./Godfather_Discord_Bot
